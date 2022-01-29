@@ -33,6 +33,7 @@ The software and web-based GUI (graphical user interface) tool used for this ana
 ### Outcomes 
 
 CANVAS > There is a bulleted list with **four major** points from the two analysis deliverables.
+Provide a bulleted list with four major points from the two analysis deliverables. Use images as support where needed.
 
 The code block is as follows:
 
@@ -47,5 +48,8 @@ weekly_range_df
 ## Summary
 
 CANVAS> The summary addresses the two questions and contains two additional queries or tables that may provide more insight.
+Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami."
+How many roles will need to be filled as the "silver tsunami" begins to make an impact?
+Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
 
 In summary, an exploratory analysis on city and ride data was completed in order to generate a summary DataFrame of the ride-sharing data by city type. This data was then represented in a multiple-line chart so that it can be used to inform discussion and assist the CEO and management to determine affordability for underserved neighborhoods.
