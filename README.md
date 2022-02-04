@@ -102,6 +102,13 @@ ORDER BY emp_no;
 
 Based on the **Retiring Titles** table, the total number of employees soon to retire are 72,458. Looking closer at the data, the highest count of job positions to retire are Senior Engineers at 25,916 or 36% and Senior Staff at 24,926 or 34% out of the 72,458 employees.
 
+Note: Two different table formats are provided to show the row of total counts.
+
+<p float="left">
+  <img src="Images/Retiring_titles_sql.png" width="300" height="280" />
+  <img src="Images/Retiring_titles_excel.png" width="300" height="280" /> 
+</p>
+
 An additional table was created to display the total number of employees, which are 240,124, currently working at Pewlett-Hackard. These numbers have been grouped by job title to have a relative view to the retiring titles table. This table shows the amount of opportunity to promote within the company, i.e. Assistant Engineers to Engineers to Sr. Engineer roles. Some of the benefits of doing so are that it increases company morale, offers upward mobility, improves retention rate which saves hiring costs especially for senior and management roles, and ultimately gives the opportunity to mentor entry-level employees, which leads us to the next question.
 
 * The data table is available here: [totalemp_titles](Data/totalemp_titles.csv)
@@ -114,24 +121,24 @@ Note: Two different table formats are provided to show the row of total counts.
 </p>
 
 
-Furthermore, to view it from a cost/salary perspective, a table was created to display the sum of salaries per job title for those 72,458 employees that are retiring soon. Clearly the cost to replace 25,916 Senior Engineers and 24,926 Senior Staff is quite high at a total of $1,255,837,996 and $1,454,372,739, respectively. 
+Furthermore, to view it from a salary perspective, a table was created to display the sum of salaries per job title for those 72,458 employees that are retiring soon. Clearly the cost to replace 25,916 Senior Engineers and 24,926 Senior Staff is quite high at a total of $1,255,837,996 and $1,454,372,739, respectively. 
 
 * The data table is available here: [totalemp_titles_salaries](Data/totalemp_titles_salaries.csv)
 
 Note: Two different table formats are provided to show the row of total counts.
 
 <p float="left">
-  <img src="Images/totalemp_titles_salaries_sql.png" width="310" height="225" />
-  <img src="Images/totalemp_titles_salaries_excel.png" width="310" height="225" /> 
+  <img src="Images/totalemp_titles_salaries_sql.png" width="320" height="220" />
+  <img src="Images/totalemp_titles_salaries_excel.png" width="320" height="220" /> 
 </p>
 
 
 
 2.	Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
 
-There is a total of 1,549 employees ready to mentor as determined from the “Mentorship Eligibility” table, however the ratio per department is very different to the needs the company has at the time this analysis was completed. For example, the number of Senior Staff and Senior Engineers available to mentor are 429 and 411, respectively, which clearly is not enough to meet the high demand that is coming from each respective job title. 
+There is a total of 1,549 employees ready to mentor as determined from the **Mentorship Eligibilit** table, however the ratio per department is very different to the needs the company has at the time this analysis was completed. For example, the number of Senior Staff and Senior Engineers available to mentor are 429 and 411, respectively, which clearly is not enough to meet the high demand that is coming from each respective job title. 
 
-To show this data, an additional table was created using the same information as in the “Mentorship Eligibility” table, while grouped by job title. 
+To show this data, an additional table was created using the same information as in the **Mentorship Eligibilit** table, while grouped by job title. 
 
 * The data table is available here: [mentorship_groupeligibility](Data/mentorship_groupeligibility.csv)
 
