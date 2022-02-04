@@ -1,4 +1,4 @@
-# Employee Database Analysis
+# Pewlett-Hackard Employee Database Analysis
 
 ## Overview
 
@@ -38,12 +38,16 @@ Provide a bulleted list with four major points from the two analysis deliverable
 The code block is as follows:
 
 ```
-filter_daterange_df = pivot_df.loc['2019-01-01':'2019-04-28']
-filter_daterange_df
-
-weekly_range_df = filter_daterange_df.resample('W').sum()
-weekly_range_df
+SELECT DISTINCT ON  (emp_no) emp_no,
+                    first_name,
+                    last_name,
+                    title
+INTO unique_titles
+FROM retirement_titles
+WHERE to_date = ('9999-01-01')
+ORDER BY emp_no, to_date DESC;
 ```
+
 
 ## Summary
 
