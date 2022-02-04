@@ -14,7 +14,7 @@ This employee database analysis can be used to inform discussion and assist mana
 
 ### Datasets and Files
 
-The employee database analysis is based on the following datasets: 
+The employee database analysis is based on the following data tables: 
 
 * Retirement Titles: [retirement_titles](Data/retirement_titles.csv)
 * Unique Titles: [unique_titles](Data/unique_titles.csv)
@@ -34,11 +34,11 @@ The software and web-based GUI (graphical user interface) tool used for this ana
 
 Below are 4 points worth noting from the employee database analysis:
 
-* An initial data exploration on Pewlett-Hackard’s employee dataset was done to filter all the employees who were born between January 1, 1952 and December 31, 1955; whom are considered employees of retirement-age. As data was retrieved, it was found that the total count of retirement-age employees is 133, 776, which is stored in the “Retirement Titles” table. This number is quite high as it includes employees that received/had multiple job titles throughout the years as well as employees that no longer work at the company.
+* An initial data exploration on Pewlett-Hackard’s employee dataset was done to filter all the employees who were born between January 1, 1952 and December 31, 1955; whom are considered employees of retirement-age. As data was retrieved, it was found that the total count of retirement-age employees is 133, 776, which is stored in the **Retirement Titles** table. This number is quite high as it includes employees that had multiple job titles throughout the years as well as employees that no longer work at the company.
 
-* To exclude those employees that may have had multiple titles due to promotions, the DISTINCT ON statement was used to consider the most recent job title for each employee. In addition, the to_date statement was used to remove the employees that have already left the company and keep only those employees with a “to date” that is equal to '9999-01-01'. This filtered data is stored in the “Unique Titles” table, which has a total of 72,458 employees with their most recent job title, that are currently working at the company and that are ready to retire.
+* To exclude those employees that may have had multiple titles due to promotions, the **DISTINCT ON** statement was used to consider the most recent job title for each employee. In addition, the **to_date** statement was used to remove the employees that have already left the company and keep only those employees with a "to date” that is equal to '9999-01-01'. This filtered data is stored in the **Unique Titles** table, which has a total of 72,458 employees with their most recent job title, that are currently working at the company and that are ready to retire.
 
-To create the “Unique Titles” table, the PostgreSQL query is as follows:
+To create the **Unique Titles** table, the PostgreSQL query is as follows:
 
 ```
 SELECT DISTINCT ON  (emp_no) emp_no,
@@ -51,18 +51,18 @@ WHERE to_date = ('9999-01-01')
 ORDER BY emp_no, to_date DESC;
 ```
 
-* To display the 72,458 employees that are ready to retire by job title, a “Retiring Titles” table was created. This table is grouped by job title and the count is in a descending order, meaning the job titles with the highest number of counts are listed first. As noted in the table below, Senior Engineers and Senior Staff have the highest number of job positions that are soon to be available at 25,916 and 24,926 respectively.
+* To display the 72,458 employees that are ready to retire by job title, a **Retiring Titles** table was created. This table is grouped by job title and the count is in a descending order, meaning the job titles with the highest number of counts are listed first. As noted in the table below, Senior Engineers and Senior Staff have the highest number of job positions that are soon to be available at 25,916 and 24,926, respectively.
 
 Note: Two different table formats are provided to show the row of total counts.
 
 <p float="left">
-  <img src="Images/Retiring_titles_sql.png" width="300" height="300" />
-  <img src="Images/Retiring_titles_excel.png" width="300" height="300" /> 
+  <img src="Images/Retiring_titles_sql.png" width="300" height="280" />
+  <img src="Images/Retiring_titles_excel.png" width="300" height="280" /> 
 </p>
 
-* Lastly, a separate data exploration was completed to identify those employees who are eligible to participate in a mentorship program at Pewlett-Hackard, therefore the “Mentorship Eligibility” table was created. The total number of employees qualified for this program is 1,549. The criteria used for this search was based on current employees who were born between January 1, 1965 and December 31, 1965. These employees hold at least 10 years of experience within the company making them highly qualified for the program and giving them the opportunity to share their skill sets to newer or less experienced employees in order to advance their careers.
+* Lastly, a separate data exploration was completed to identify those employees who are eligible to participate in a mentorship program at Pewlett-Hackard, therefore the **Mentorship Eligibility** table was created. The total number of employees qualified for this program is 1,549. The criteria used for this search was based on current employees who were born between January 1, 1965 and December 31, 1965. These employees hold at least 10 years of experience within the company making them highly qualified for the program and giving them the opportunity to share their skill sets to newer or less experienced employees in order to advance their careers.
 
-To create the “Mentorship Eligibility” table, the PostgreSQL query is as follows:
+To create the **Mentorship Eligibility** table, the PostgreSQL query is as follows:
 
 ```
 SELECT  emp_no,
@@ -100,25 +100,29 @@ ORDER BY emp_no;
 
 1.	How many roles will need to be filled as the "silver tsunami" begins to make an impact? 
 
-Based on the “Retiring Titles” table, the total number of employees soon to retire are 72,458. Looking closer at the data, the highest count of job positions to retire are Senior Engineers at 25,916 or 36% and Senior Staff at 24,926 or 34% out of the 72,458 employees.
+Based on the **Retiring Titles** table, the total number of employees soon to retire are 72,458. Looking closer at the data, the highest count of job positions to retire are Senior Engineers at 25,916 or 36% and Senior Staff at 24,926 or 34% out of the 72,458 employees.
 
-An additional table is provided that quantifies the total number of employees that are currently working at Pewlett-Hackard. These numbers have been grouped by job title to have a relative view to the retiring titles table. This table shows the amount of opportunity to promote within the company, i.e. Assistant Engineers to Engineers to Sr. Engineer roles. Some of the benefits of doing so are that it increases company morale, offers upward mobility, improves retention rate which saves hiring costs especially for senior and management roles, and ultimately gives the opportunity to mentor entry-level employees, which leads us to the next question.
+An additional table was created to display the total number of employees, which are 240,124, currently working at Pewlett-Hackard. These numbers have been grouped by job title to have a relative view to the retiring titles table. This table shows the amount of opportunity to promote within the company, i.e. Assistant Engineers to Engineers to Sr. Engineer roles. Some of the benefits of doing so are that it increases company morale, offers upward mobility, improves retention rate which saves hiring costs especially for senior and management roles, and ultimately gives the opportunity to mentor entry-level employees, which leads us to the next question.
+
+* The data table is available here: [totalemp_titles](Data/totalemp_titles.csv)
 
 Note: Two different table formats are provided to show the row of total counts.
 
 <p float="left">
-  <img src="Images/Total_employees_sql.png" width="300" height="280" />
-  <img src="Images/Total_employees_excel.png " width="300" height="280" /> 
+  <img src="Images/Total_employees_sql.png" width="300" height="250" />
+  <img src="Images/Total_employees_excel.png " width="300" height="250" /> 
 </p>
 
 
 Furthermore, to view it from a cost/salary perspective, a table was created to display the sum of salaries per job title for those 72,458 employees that are retiring soon. Clearly the cost to replace 25,916 Senior Engineers and 24,926 Senior Staff is quite high at a total of $1,255,837,996 and $1,454,372,739, respectively. 
 
+* The data table is available here: [totalemp_titles_salaries](Data/totalemp_titles_salaries.csv)
+
 Note: Two different table formats are provided to show the row of total counts.
 
 <p float="left">
-  <img src="Images/totalemp_titles_salaries_sql.png" width="310" height="260" />
-  <img src="Images/totalemp_titles_salaries_excel.png" width="310" height="260" /> 
+  <img src="Images/totalemp_titles_salaries_sql.png" width="310" height="225" />
+  <img src="Images/totalemp_titles_salaries_excel.png" width="310" height="225" /> 
 </p>
 
 
@@ -129,11 +133,13 @@ There is a total of 1,549 employees ready to mentor as determined from the “Me
 
 To show this data, an additional table was created using the same information as in the “Mentorship Eligibility” table, while grouped by job title. 
 
+* The data table is available here: [mentorship_groupeligibility](Data/mentorship_groupeligibility.csv)
+
 Note: Two different table formats are provided to show the row of total counts.
 
 <p float="left">
-  <img src="Images/Mentorship_groupeligibility_sql.png" width="310" height="260" />
-  <img src="Images/Mentorship_groupeligibility_excel.png" width="310" height="260" /> 
+  <img src="Images/Mentorship_groupeligibility_sql.png" width="300" height="250" />
+  <img src="Images/Mentorship_groupeligibility_excel.png" width="300" height="250" /> 
 </p>
 
 
