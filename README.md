@@ -109,18 +109,6 @@ Note: Two different table formats are provided to show the row of total counts.
   <img src="Images/Retiring_titles_excel.png" width="300" height="280" /> 
 </p>
 
-An additional table was created to display the total number of employees, which are 240,124, currently working at Pewlett-Hackard. These numbers have been grouped by job title to have a relative view to the retiring titles table. This table shows the amount of opportunity to promote within the company, i.e. Assistant Engineers to Engineers to Sr. Engineer roles. Some of the benefits of doing so are that it increases company morale, offers upward mobility, improves retention rate which saves hiring costs especially for senior and management roles, and ultimately gives the opportunity to mentor entry-level employees, which leads us to the next question.
-
-* The data table is available here: [totalemp_titles](Data/totalemp_titles.csv)
-
-Note: Two different table formats are provided to show the row of total counts.
-
-<p float="left">
-  <img src="Images/Total_employees_sql.png" width="300" height="250" />
-  <img src="Images/Total_employees_excel.png " width="300" height="250" /> 
-</p>
-
-
 Furthermore, to view it from a salary perspective, a table was created to display the sum of salaries per job title for those 72,458 employees that are retiring soon. Clearly the cost to replace 25,916 Senior Engineers and 24,926 Senior Staff is quite high at a total of $1,255,837,996 and $1,454,372,739, respectively. 
 
 * The data table is available here: [totalemp_titles_salaries](Data/totalemp_titles_salaries.csv)
@@ -130,6 +118,18 @@ Note: Two different table formats are provided to show the row of total counts.
 <p float="left">
   <img src="Images/totalemp_titles_salaries_sql.png" width="320" height="220" />
   <img src="Images/totalemp_titles_salaries_excel.png" width="320" height="220" /> 
+</p>
+
+
+An additional table was created to display the total number of employees, which are 240,124, currently working at Pewlett-Hackard. These numbers have been grouped by job title to have a relative view to the retiring titles table. This table shows the amount of opportunity to promote within the company, i.e. Assistant Engineers to Engineers to Sr. Engineer roles. Some of the benefits of doing so are that it increases company morale, offers upward mobility, improves retention rate which saves hiring costs especially for senior and management roles, and ultimately gives the opportunity to mentor entry-level employees, which leads us to the next question.
+
+* The data table is available here: [totalemp_titles](Data/totalemp_titles.csv)
+
+Note: Two different table formats are provided to show the row of total counts.
+
+<p float="left">
+  <img src="Images/Total_employees_sql.png" width="300" height="250" />
+  <img src="Images/Total_employees_excel.png " width="300" height="250" /> 
 </p>
 
 
