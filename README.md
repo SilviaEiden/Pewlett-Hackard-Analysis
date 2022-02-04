@@ -138,7 +138,7 @@ Note: Two different table formats are provided to show the row of total counts.
 
 There is a total of 1,549 employees ready to mentor as determined from the **Mentorship Eligibility** table. However, the ratio per department is very different to the needs the company has at the time of this analysis. For example, the number of Senior Staff and Senior Engineers available to mentor are 429 and 411, respectively, which clearly is not enough to meet the high demand that is coming from each respective job title. 
 
-To show this data, an additional table was created using the same information as in the **Mentorship Eligibilit** table, while grouped by job title. 
+To show this data, an additional table was created using the same information as in the **Mentorship Eligibility** table, while grouped by job title. 
 
 * The data table is available here: [mentorship_groupeligibility](Data/mentorship_groupeligibility.csv)
 
